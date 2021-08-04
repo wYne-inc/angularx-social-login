@@ -26,7 +26,7 @@ export class AppleLoginProvider extends BaseLoginProvider {
                 });
         });
     }
-    singIn = async () => {
+    async signIn(opt?: LoginOpt): Promise<SocialUser>{
         console.log("AppleCall Signin");
         const response = await AppleID.auth.signIn();
         console.log('apple response', response);
