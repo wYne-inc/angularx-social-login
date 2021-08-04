@@ -26,7 +26,14 @@ export class AppleLoginProvider extends BaseLoginProvider {
                 });
         });
     }
-
+    singIn = async () => {
+        console.log("AppleCall Signin");
+        const response = await AppleID.auth.signIn();
+        console.log('apple response', response);
+        return response;
+    };
+    
+    /*
     signIn(opt?: LoginOpt): Promise<SocialUser> {
         console.log("AppleCall Signin");
         return new Promise((resolve, reject) => {
@@ -36,7 +43,8 @@ export class AppleLoginProvider extends BaseLoginProvider {
                 });
         });
     }
-getLoginStatus(): Promise<SocialUser> {
+    */
+    getLoginStatus(): Promise<SocialUser> {
         return null;
     }
 signOut(revoke?: boolean): Promise<any> {
