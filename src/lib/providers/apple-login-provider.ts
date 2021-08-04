@@ -21,7 +21,7 @@ export class AppleLoginProvider extends BaseLoginProvider {
                             clientId : this.clientId,
                             scope : this.scope,
                             redirectURI: this.redirectURI,
-                            popUp: this.popUp
+                            usePopup: this.popUp
                         });
                 });
         });
